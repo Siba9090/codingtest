@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sort by ID</title>
+</head>
+<body>
+<script type="text/javascript">
+	var obj = {
+"id":4, "name":"abc",
+"id":10, "name":"ab2",
+"id":5, "name":"abc3",
+"id":6,"name":"abc5"
+};
+var array=[];
+for (var i in obj){
+    if (obj.hasOwnProperty(i)){
+        obj[i].id=i;
+        array.push(obj[i]);
+    }
+}
+var fieldToSort="id"; //or "title" or "name"
+array.sort(function(a,b){
+    return a[fieldToSort] - b[fieldToSort];
+});
+</script>
+</body>
+</html>

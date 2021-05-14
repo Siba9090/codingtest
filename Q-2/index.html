@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Consecutive Number</title>
+</head>
+<body>
+<h1>Consecutive Number</h1>
+<script type="text/javascript">
+	function conse(arr,n) {
+		var c=0;
+		var r=0;
+		for(var i=0;i<n;i++){
+			if(arr[i] == 0)
+				c=0;
+			else{
+				c++;
+				r=Math.max(r,c);
+			}
+		}
+		return r;
+	}
+	var arr = [0,0,1,1,0,0,0,1,0,0,1,1,1,0];
+	var n =  Object.keys(arr).length/ Object.keys(arr[0]).length;
+	document.write(conse(arr,n));
+</script>
+</body>
+</html>

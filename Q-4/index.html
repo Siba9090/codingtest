@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function validateform(){  
+var name=document.sp.name.value;  
+ 
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(!this.sp.check.checked)
+{
+    alert('You must agree the term&cond checkbox.');
+    return false;
+}
+}  
+	</script>
+<form name="sp" action="" method="POST" onsubmit="return validateform()">
+	Name:<input type="text" name="name"><br>
+	Agree:<input type="checkbox" name="check"><br>
+	<input type="submit" name="submit">
+</form>
+</body>
+</html>

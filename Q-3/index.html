@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Duplicate Number</title>
+</head>
+<body>
+<script>
+    function rept(arr , size)
+    {
+        var i, j;
+        document.write("Repeated numbers are :");
+        for (i = 0; i < size; i++)
+        {
+            for (j = i + 1; j < size; j++)
+            {
+                if (arr[i] == arr[j])
+                    document.write(arr[i] + " ");
+            }
+        }
+    }
+ 
+var arr = [0,1,2,3,4,5,6,7,7,8,9,10];
+document.write("Original Array is:"+arr);
+document.write("<br>");
+var arr_size = arr.length;
+rept(arr, arr_size);
+ 
+// This code is contributed by 29AjayKumar
+</script>
+</body>
+</html>
